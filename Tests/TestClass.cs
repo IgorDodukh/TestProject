@@ -15,7 +15,6 @@ namespace TestProject.Tests
         private const string SearchRequest = "iphone xs max 512";
         private const string MainUrl = "https://my.rozetka.com.ua/";
 
-        private IWait<IWebDriver> wait;
         private static IWebDriver _driver;
         private AppUser _user;
 
@@ -30,7 +29,6 @@ namespace TestProject.Tests
             _driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             _driver.Manage().Window.Maximize();
             _driver.Navigate().GoToUrl(MainUrl);
-            wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
         }
 
         [Test]
